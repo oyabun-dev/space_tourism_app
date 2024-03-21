@@ -1,0 +1,170 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.h1 {
+  font: 150px "Bellefair", serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.h2 {
+  font: 100px "Bellefair", serif;
+}
+
+.h3 {
+  font: 56px "Bellefair", serif;
+}
+
+.h4 {
+  font: 32px "Bellefair", serif;
+}
+
+.h5 {
+  font: 28px "Barlow Condensed", serif;
+  letter-spacing: 4.75px;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 0;
+  color: #D0D6F9;
+}
+
+.body-text {
+  font: 18px "Barlow", sans-serif;
+  margin: 0;
+  color: #D0D6F9;
+  line-height: 32px;
+  font-weight: 300;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+nav.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 0 50px;
+}
+nav.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.navigation ul li {
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.1s ease-in-out;
+}
+nav.navigation ul li.active {
+  border-bottom: 2px solid #FFFFFF;
+}
+nav.navigation ul li:hover {
+  border-bottom: 2px solid #979797;
+}
+nav.navigation ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1.5vmin;
+  font: 16px "Barlow Condensed", sans-serif;
+  letter-spacing: 2.7px;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+nav.navigation ul li a b {
+  height: fit-content;
+}
+nav.navigation hr {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3137254902);
+  width: 35%;
+  height: 1px;
+  border: none;
+  z-index: 1;
+  left: 13%;
+}
+nav.navigation ul {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.0274509804);
+  padding: 0 15vmin 0 10vmin;
+  margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 3vmin;
+}
+nav.navigation ul li {
+  margin: 0 10px;
+  height: 100%;
+  padding: 37px 0;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  height: 100vh;
+  background-image: url("../img/home/background-home-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+main#landingPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+main#landingPage .main-content {
+  padding: 2vmin 15vmin 13vmin 15vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+main#landingPage .main-content aside.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: min-content;
+}
+main#landingPage .main-content aside.button-side a.rounded-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 17.125rem;
+  height: 17.125rem;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: #0B0D17;
+  font: 32px "Bellefair", serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+main#landingPage .main-content aside.button-side a.rounded-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1254901961);
+  z-index: -1;
+  transition: all 0.1s ease-in-out;
+  top: 0;
+  left: 0;
+}
+main#landingPage .main-content aside.button-side a.rounded-btn:hover::after {
+  transform: scale(1.5);
+}
+
+/*# sourceMappingURL=style.css.map */

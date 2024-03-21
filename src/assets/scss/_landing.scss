@@ -1,0 +1,44 @@
+@use 'variables';
+@use 'navbar';
+@import 'mixins';
+
+body {
+    font-family: variables.$barlow;    
+    height: 100vh;
+    background-image: url('../img/home/background-home-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    color: variables.$accent;
+}
+
+main#landingPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    
+    .main-content {
+        padding: 2vmin 15vmin 13vmin 15vmin;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        
+        aside.headline {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1.5rem;
+            width: min-content;
+        }
+
+        aside.button-side {
+            a.rounded-btn {
+                @include rounded-button;
+                margin: 0;
+            }
+        }
+    }
+}
+

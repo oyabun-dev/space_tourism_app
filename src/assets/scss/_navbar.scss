@@ -1,0 +1,50 @@
+@use 'variables';
+@import 'mixins';
+
+nav.navigation {
+    @include nav;
+    padding: 30px 0 0 50px;
+
+    hr {
+        position: absolute;
+        background-color: #FFFFFF50;
+        width: 35%;
+        height: 1px;
+        border: none;
+        z-index: 1;
+        left: 13%;
+    }
+
+    ul {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: #ffffff07;
+        padding:0 15vmin 0 10vmin;
+        margin: 0;
+        width: -moz-fit-content;
+        width: fit-content;
+        gap: 3vmin;
+
+        li {
+            margin: 0 10px;
+            height: 100%;
+            padding: 37px 0;
+        }
+    }
+}
+
+@media (max-width: 575.98px) { 
+
+}
+
+@media (min-width: 576px) { 
+
+}
+
+@media (min-width: 768px) { 
+
+}
+
+@media (min-width: 992px) { 
+
+}

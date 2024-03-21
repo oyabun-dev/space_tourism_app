@@ -1,0 +1,45 @@
+@use 'variables';
+
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.h1 {
+    font: variables.$h1;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.h2 {
+    font: variables.$h2;
+}
+
+.h3 {
+    font: variables.$h3;
+}
+
+.h4 {
+    font: variables.$h4;
+}
+
+.h5 {
+    font: variables.$h5;
+    letter-spacing: 4.75px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 0;
+    color: variables.$secondary;
+}
+
+.body-text {
+    font: variables.$body-text;
+    margin: 0;
+    color: variables.$secondary;
+    line-height: 32px;
+    font-weight: 300;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
