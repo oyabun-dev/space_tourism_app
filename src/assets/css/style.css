@@ -1,6 +1,8 @@
 * {
   position: relative;
   box-sizing: border-box;
+  will-change: all;
+  transition: all 0.2s ease-in-out;
 }
 
 .h1 {
@@ -42,6 +44,19 @@
   text-transform: uppercase;
 }
 
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .h1 {
+    font-size: 130px;
+  }
+  .h5 {
+    font-size: 20px;
+    letter-spacing: 3.38px;
+  }
+  .body-text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
 nav.navigation {
   display: flex;
   justify-content: space-between;
@@ -84,21 +99,21 @@ nav.navigation ul li a b {
 nav.navigation hr {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.3137254902);
-  width: 35%;
+  width: 32vw;
   height: 1px;
   border: none;
   z-index: 1;
-  left: 13%;
+  left: 15vw;
 }
 nav.navigation ul {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.0274509804);
-  padding: 0 15vmin 0 10vmin;
+  padding: 0 10vw 0 7vw;
   margin: 0;
   width: -moz-fit-content;
   width: fit-content;
-  gap: 3vmin;
+  gap: 1.7vw;
 }
 nav.navigation ul li {
   margin: 0 10px;
@@ -106,12 +121,32 @@ nav.navigation ul li {
   padding: 37px 0;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  nav.navigation {
+    padding: 0 0 0 50px;
+  }
+  nav.navigation hr {
+    display: none;
+  }
+  nav.navigation ul {
+    padding: 0 7vw 0 7vw;
+    gap: 1.7vw;
+  }
+  nav.navigation ul li {
+    padding: 37px 0;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  nav.navigation hr {
+    display: none;
+  }
+  nav.navigation ul {
+    display: none;
+  }
+}
 body {
   font-family: "Barlow Condensed", sans-serif;
   height: 100vh;
-  background-image: url("../img/home/background-home-desktop.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   margin: 0;
   color: #FFFFFF;
 }
@@ -121,13 +156,17 @@ main#landingPage {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  background-image: url("../img/home/background-home-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 main#landingPage .main-content {
-  padding: 2vmin 15vmin 13vmin 15vmin;
+  padding: 2vh 10vw 13vh 10vw;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
+  height: 100vh;
 }
 main#landingPage .main-content aside.headline {
   display: flex;
@@ -158,13 +197,36 @@ main#landingPage .main-content aside.button-side a.rounded-btn::after {
   height: 100%;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1254901961);
-  z-index: -1;
+  z-index: 0;
   transition: all 0.1s ease-in-out;
   top: 0;
   left: 0;
 }
 main#landingPage .main-content aside.button-side a.rounded-btn:hover::after {
   transform: scale(1.5);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  main#landingPage {
+    background-image: url("../img/home/background-home-tablet.jpg");
+    background-position-y: -180px;
+  }
+  main#landingPage .main-content {
+    padding: 2vh 7vw 0 7vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  main#landingPage .main-content aside.headline {
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  main#landingPage .main-content aside.button-side a.rounded-btn {
+    margin: 3rem 3rem 2.4rem 3rem;
+    height: 15rem;
+    width: 15rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
