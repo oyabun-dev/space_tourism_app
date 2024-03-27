@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "@iconify/react": "^4.1.1",
     "react-scripts": "^5.0.1"
   }
 }

@@ -1,8 +1,8 @@
 * {
   position: relative;
   box-sizing: border-box;
-  will-change: all;
-  transition: all 0.2s ease-in-out;
+  will-change: color background-color background-image background-position padding margin font-size border flex align-items justify-content letter-spacing;
+  transition: color background-color background-image padding margin font-size border flex align-items justify-content letter-spacing 0.2s ease-in-out;
 }
 
 .h1 {
@@ -57,6 +57,19 @@
     line-height: 28px;
   }
 }
+@media (max-width: 575.98px) {
+  .h1 {
+    font-size: 100px;
+  }
+  .h5 {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+  .body-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
 nav.navigation {
   display: flex;
   justify-content: space-between;
@@ -96,6 +109,19 @@ nav.navigation ul li a {
 nav.navigation ul li a b {
   height: fit-content;
 }
+nav.navigation .burger {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  nav.navigation ul {
+    padding: 2rem 0 0 2rem !important;
+  }
+  nav.navigation ul .burger {
+    display: flex;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+}
 nav.navigation hr {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.3137254902);
@@ -131,6 +157,7 @@ nav.navigation ul li {
   nav.navigation ul {
     padding: 0 7vw 0 7vw;
     gap: 1.7vw;
+    background-color: rgba(255, 255, 255, 0.0588235294);
   }
   nav.navigation ul li {
     padding: 37px 0;
@@ -141,7 +168,96 @@ nav.navigation ul li {
     display: none;
   }
   nav.navigation ul {
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  nav.navigation ul .navbar-item {
     display: none;
+  }
+}
+@media (max-width: 767.98px) {
+  nav.navigation {
+    padding: 0 30px 0 30px;
+    min-width: 350px;
+  }
+  nav.navigation a.site-logo {
+    padding-top: 1.5rem;
+  }
+  nav.navigation hr {
+    display: none;
+  }
+  nav.navigation ul .navbar-item {
+    display: none;
+  }
+  nav.navigation ul.navbar-list.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 5rem !important;
+    width: 65vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.062745098);
+    -webkit-backdrop-filter: blur(35px);
+    backdrop-filter: blur(35px);
+    z-index: 100;
+    gap: 1rem;
+    transition: all 0.5s ease-in-out;
+    animation: slideInFromRight 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  nav.navigation ul.navbar-list.active li {
+    display: flex;
+    box-sizing: initial;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1rem 0 1rem 0;
+    font: 16px "Barlow Condensed", sans-serif;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: all 0.5s ease-in-out;
+    border-bottom: 2px solid transparent;
+  }
+  nav.navigation ul.navbar-list.active li.active {
+    border-bottom: 2px solid #FFFFFF;
+  }
+  nav.navigation ul.navbar-list.active li:hover {
+    border-bottom: 2px solid #979797;
+  }
+  nav.navigation ul.navbar-list.active li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+  }
+  nav.navigation ul.navbar-list.active .burger {
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+  }
+  nav.navigation ul.navbar-list.active .burger:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 7px #FFFFFF);
+  }
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideOutToRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
   }
 }
 body {
@@ -210,6 +326,29 @@ main#landingPage .main-content aside.button-side a.rounded-btn:hover::after {
   main#landingPage {
     background-image: url("../img/home/background-home-tablet.jpg");
     background-position-y: -180px;
+  }
+  main#landingPage .main-content {
+    height: 100%;
+    padding: 2vh 7vw 0 7vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  main#landingPage .main-content aside.headline {
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  main#landingPage .main-content aside.button-side a.rounded-btn {
+    margin: 3rem 3rem 2.4rem 3rem;
+    height: 15rem;
+    width: 15rem;
+  }
+}
+@media (max-width: 767.98px) {
+  main#landingPage {
+    background-image: url("../img/home/background-home-mobile.jpg");
+    padding-top: 0;
   }
   main#landingPage .main-content {
     padding: 2vh 7vw 0 7vw;

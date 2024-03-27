@@ -41,7 +41,23 @@
             }
         }
     }
-    
+
+    .burger {
+        display: none;
+    }
+
+    @media (max-width: 767.98px) {
+        ul {
+            padding: 2rem 0 0 2rem !important;
+            .burger {
+                display: flex;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+            }   
+        }
+        
+    }
+     
 }
 
 @mixin rounded-button {

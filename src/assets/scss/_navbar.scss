@@ -49,6 +49,7 @@ nav.navigation {
         ul {
             padding:0 7vw 0 7vw;
             gap: 1.7vw;
+            background-color: #ffffff0f;
 
             li {
                 padding: 37px 0;
@@ -64,11 +65,113 @@ nav.navigation {
             display: none;
         }
         ul {
+            background-color: transparent;
+            -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+        }
+        ul .navbar-item {
             display: none;
         }
     }
 }
 
-@media (max-width: 575.98px) { 
+@media (max-width: 767.98px) { 
+    nav.navigation {
+        padding: 0 30px 0 30px;
+        min-width: 350px;
 
+        a.site-logo {
+            padding-top: 1.5rem;
+        }
+        hr {
+            display: none;
+        }
+
+        ul .navbar-item {
+            display: none;
+        }
+
+        ul.navbar-list.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding-top: 5rem !important;
+            width: 65vw;
+            height: 100vh;
+            background-color: #FFFFFF10;
+            -webkit-backdrop-filter: blur(35px);
+            backdrop-filter: blur(35px);
+            z-index: 100;
+            gap: 1rem;
+            transition: all .5s ease-in-out;
+            animation: slideInFromRight .5s ease-in-out;
+            animation-fill-mode: forwards;
+            li {
+                display: flex;
+                box-sizing: initial;
+                height: -moz-fit-content;
+                height: fit-content;
+                padding: 1rem 0 1rem 0;
+                font: variables.$nav-text;
+                color: variables.$accent;
+                text-transform: uppercase;
+                font-weight: 300;
+                transition: all .5s ease-in-out;
+                border-bottom: 2px solid transparent;
+
+                &.active {
+                    border-bottom: 2px solid variables.$accent;
+                }
+
+                &:hover {
+                    border-bottom: 2px solid #979797;
+                }
+                a {
+                    color: variables.$accent;
+                    text-decoration: none;
+                    transition: all .5s ease-in-out;
+                }
+            }
+
+            .burger {
+                position: absolute;
+                top: 2.5rem;
+                right: 2rem;
+            }
+
+            .burger:hover {
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 7px #FFFFFF);
+            }
+
+        }
+        
+        // ul.navbar-list.not-active {
+        //     /* Vos styles pour le menu lorsqu'il est désactivé avec animation */
+        //     animation: slideOutToRight .5s ease-in-out;
+        //     animation-fill-mode: backwards;
+        // }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }  
+        }
+
+        @keyframes slideOutToRight {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(100%);
+            }  
+        }
+    }
 }
