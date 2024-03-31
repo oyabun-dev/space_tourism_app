@@ -263,6 +263,7 @@ nav.navigation ul li {
 body {
   font-family: "Barlow Condensed", sans-serif;
   height: 100vh;
+  background-color: black;
   margin: 0;
   color: #FFFFFF;
 }
@@ -275,6 +276,7 @@ main#landingPage {
   background-image: url("../img/home/background-home-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 main#landingPage .main-content {
   padding: 2vh 10vw 13vh 10vw;
@@ -366,6 +368,26 @@ main#landingPage .main-content aside.button-side a.rounded-btn:hover::after {
     height: 15rem;
     width: 15rem;
   }
+}
+#destination {
+  background-image: url("../img/destination/background-destination-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+#destination .destination {
+  padding: 2rem 50px 2rem 50px;
+}
+
+h5.pageTitle {
+  font: 28px "Barlow Condensed", serif;
+  letter-spacing: 4.75px;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 0;
+  color: #D0D6F9;
+}
+h5.pageTitle b {
+  color: rgba(255, 255, 255, 0.3137254902);
 }
 
 /*# sourceMappingURL=style.css.map */

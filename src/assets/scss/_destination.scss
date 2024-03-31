@@ -1,0 +1,11 @@
+@use 'variables';
+
+#destination {
+    background-image: url('../img/destination/background-destination-desktop.jpg');
+    background-size: cover;
+    height: 100vh;
+
+    .destination {
+        padding: 2rem 50px 2rem 50px;
+    }
+}

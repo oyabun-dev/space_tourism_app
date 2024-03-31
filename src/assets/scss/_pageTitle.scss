@@ -1,0 +1,14 @@
+@use 'variables';
+
+h5.pageTitle {
+    font: variables.$h5;
+    letter-spacing: 4.75px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin: 0;
+    color: variables.$secondary;
+
+    b {
+        color: #FFFFFF50;
+    }
+}

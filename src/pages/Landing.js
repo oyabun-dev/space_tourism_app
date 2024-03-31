@@ -1,4 +1,6 @@
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
+import { Link } from "react-router-dom";
+
 export default function Landing() {
     return (
         <main id='landingPage'>
@@ -10,7 +12,7 @@ export default function Landing() {
                     <p className='body-text'>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
                 </aside>
                 <aside className='button-side'>
-                    <a href="/" className='rounded-btn'>Explore</a>
+                    <Link to="/" className='rounded-btn'>Explore</Link>
                 </aside>
             </div>
         </main>
