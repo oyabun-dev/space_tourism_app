@@ -4,8 +4,147 @@
     background-image: url('../img/destination/background-destination-desktop.jpg');
     background-size: cover;
     height: 100vh;
+    overflow-x: hidden;
 
     .destination {
-        padding: 2rem 50px 2rem 50px;
+
+        .destination-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 3.5rem;
+            img {
+                animation: rotate 50s linear infinite, slideInLeft 1s ease-in-out;
+                @keyframes rotate {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                    
+                }
+                @keyframes slideInLeft {
+                    0% {
+                        transform: translateX(-40%);
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+            }
+            aside {
+                width: min(100%, 500px);
+
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 2rem;
+                    padding: 0;
+                    width: -moz-fit-content;
+                    width: fit-content;
+
+                    li {
+                        color: variables.$accent;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: nowrap;
+                        gap: 1.5vmin;
+                        font: 16px "Barlow Condensed", sans-serif;
+                        letter-spacing: 2.7px;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-weight: 300;
+                        height: 100%;
+                        padding: 1rem 0;
+                        border-bottom: 2px solid transparent;
+                        cursor: pointer;
+
+                        &.active {
+                            border-bottom: 2px solid variables.$accent;
+                        }
+
+                        &:hover {
+                            border-bottom: 2px solid #979797;
+                        }
+                    }
+                }
+
+                .destination-info {
+                    animation: slideInTop 1s ease-in-out;
+                    @keyframes slideInTop {
+                        0% {
+                            transform: translateY(20%);
+                        }
+                        100% {
+                            transform: translateY(0);
+                        }
+                    }
+                    hr {
+                        width: 100%;
+                        margin: 2rem 0 0 0;
+                        border: .3px solid rgba(255, 255, 255, 0.3137254902);;
+                        height: 0px;
+                    }
+                    .destination-details {
+                        display: flex;
+                        gap: 5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px){ 
+    #destination {
+        .destination {
+            padding: 1rem 3rem 2rem 3rem;    
+            @media (max-width: 575.98px) {
+                padding: 1rem 2rem 2rem 2rem;
+            } 
+            
+            .destination-content {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 5vw;
+                img {
+                    width: min-content;
+                    @media (max-width: 575.98px) {
+                        width: 100%;
+                        min-width: 300px;
+                    }
+                }
+                aside {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .destination-info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        p.body-text {
+                            text-align: center;
+                        }
+
+                        .destination-details {
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 1rem;
+                            padding-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -15,10 +15,10 @@ function App() {
         <Routes>
           <Route path="/" element={< Landing />} />
           <Route path="/home" element={< Landing />} />
-          <Route path="destination" element={< Destination />} />
+          <Route path="/destination" element={< Destination />} />
           <Route path="*" element={< PageNotFound />} />
-          <Route path="crew" element={< Crew />} />
-          <Route path="technology" element={< Technology />} />
+          <Route path="/crew" element={< Crew />} />
+          <Route path="/technology" element={< Technology />} />
         </Routes>
       </BrowserRouter>
     </div>

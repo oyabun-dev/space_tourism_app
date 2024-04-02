@@ -36,6 +36,19 @@
     color: variables.$secondary;
 }
 
+.sh1 {
+    font: variables.$sh1;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.sh2 {
+    font: variables.$sh2;
+    letter-spacing: 2.36px;
+    color: variables.$secondary;
+    text-transform: uppercase;
+}
+
 .body-text {
     font: variables.$body-text;
     margin: 0;

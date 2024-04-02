@@ -32,6 +32,19 @@
   color: #D0D6F9;
 }
 
+.sh1 {
+  font: 28px "Bellefair", serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.sh2 {
+  font: 14px "Barlow Condensed", sans-serif;
+  letter-spacing: 2.36px;
+  color: #D0D6F9;
+  text-transform: uppercase;
+}
+
 .body-text {
   font: 18px "Barlow", sans-serif;
   margin: 0;
@@ -105,6 +118,7 @@ nav.navigation ul li a {
   color: #FFFFFF;
   text-transform: uppercase;
   font-weight: 300;
+  height: 100%;
 }
 nav.navigation ul li a b {
   height: fit-content;
@@ -373,11 +387,142 @@ main#landingPage .main-content aside.button-side a.rounded-btn:hover::after {
   background-image: url("../img/destination/background-destination-desktop.jpg");
   background-size: cover;
   height: 100vh;
+  overflow-x: hidden;
 }
-#destination .destination {
-  padding: 2rem 50px 2rem 50px;
+#destination .destination .destination-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+#destination .destination .destination-content img {
+  animation: rotate 50s linear infinite, slideInLeft 1s ease-in-out;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#destination .destination .destination-content aside {
+  width: min(100%, 500px);
+}
+#destination .destination .destination-content aside ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#destination .destination .destination-content aside ul li {
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1.5vmin;
+  font: 16px "Barlow Condensed", sans-serif;
+  letter-spacing: 2.7px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  height: 100%;
+  padding: 1rem 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+#destination .destination .destination-content aside ul li.active {
+  border-bottom: 2px solid #FFFFFF;
+}
+#destination .destination .destination-content aside ul li:hover {
+  border-bottom: 2px solid #979797;
+}
+#destination .destination .destination-content aside .destination-info {
+  animation: slideInTop 1s ease-in-out;
+}
+@keyframes slideInTop {
+  0% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#destination .destination .destination-content aside .destination-info hr {
+  width: 100%;
+  margin: 2rem 0 0 0;
+  border: 0.3px solid rgba(255, 255, 255, 0.3137254902);
+  height: 0px;
+}
+#destination .destination .destination-content aside .destination-info .destination-details {
+  display: flex;
+  gap: 5rem;
 }
 
+@media (max-width: 991.98px) {
+  #destination .destination {
+    padding: 1rem 3rem 2rem 3rem;
+  }
+}
+@media (max-width: 991.98px) and (max-width: 575.98px) {
+  #destination .destination {
+    padding: 1rem 2rem 2rem 2rem;
+  }
+}
+@media (max-width: 991.98px) {
+  #destination .destination .destination-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+  }
+  #destination .destination .destination-content img {
+    width: min-content;
+  }
+}
+@media (max-width: 991.98px) and (max-width: 575.98px) {
+  #destination .destination .destination-content img {
+    width: 100%;
+    min-width: 300px;
+  }
+}
+@media (max-width: 991.98px) {
+  #destination .destination .destination-content aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #destination .destination .destination-content aside .destination-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #destination .destination .destination-content aside .destination-info p.body-text {
+    text-align: center;
+  }
+  #destination .destination .destination-content aside .destination-info .destination-details {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+}
 h5.pageTitle {
   font: 28px "Barlow Condensed", serif;
   letter-spacing: 4.75px;
@@ -385,9 +530,22 @@ h5.pageTitle {
   text-transform: uppercase;
   margin: 0;
   color: #D0D6F9;
+  padding: 4rem 10rem 0 11vw;
 }
 h5.pageTitle b {
   color: rgba(255, 255, 255, 0.3137254902);
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  h5.pageTitle {
+    padding: 4rem 0 0 0;
+  }
+}
+@media (max-width: 767.98px) {
+  h5.pageTitle {
+    padding: 1.5rem 0 0 0;
+    font-size: 22px;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
