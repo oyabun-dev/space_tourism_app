@@ -95,18 +95,7 @@ nav.navigation ul {
   justify-content: space-between;
   align-items: center;
 }
-nav.navigation ul li {
-  width: -moz-fit-content;
-  width: fit-content;
-  transition: all 0.1s ease-in-out;
-}
-nav.navigation ul li.active {
-  border-bottom: 2px solid #FFFFFF;
-}
-nav.navigation ul li:hover {
-  border-bottom: 2px solid #979797;
-}
-nav.navigation ul li a {
+nav.navigation ul .navbar-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,9 +108,19 @@ nav.navigation ul li a {
   text-transform: uppercase;
   font-weight: 300;
   height: 100%;
+  padding: 2rem 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.1s ease-in-out;
 }
-nav.navigation ul li a b {
+nav.navigation ul .navbar-item b {
   height: fit-content;
+}
+nav.navigation ul .navbar-item.active {
+  border-bottom: 2px solid #FFFFFF;
+}
+nav.navigation ul .navbar-item:hover {
+  border-bottom: 2px solid #979797;
 }
 nav.navigation .burger {
   display: none;

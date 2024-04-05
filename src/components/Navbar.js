@@ -3,12 +3,12 @@ import { NavLink, Link } from "react-router-dom";
 import siteLogo from "../assets/img/shared/logo.svg";
 import burgerMenu from "../assets/img/shared/icon-hamburger.svg";
 import closeMenu from "../assets/img/shared/icon-close.svg";
-import { act } from "react-dom/test-utils";
+// import { act } from "react-dom/test-utils";
 // import { Icon } from '@iconify/react';
 
 function Navbar() {
     const navList = ['home', 'destination', 'crew', 'technology'];
-    const [activeIndex, setActiveIndex] = useState(0); // activerIndex = 0
+    const [activeIndex, setActiveIndex] = useState(null); // activerIndex = 0
     const [activeMenu, setActiveMenu] = useState(false);
 
     const showMenu = function () {
@@ -16,11 +16,9 @@ function Navbar() {
         navList.classList.toggle('active');
         setActiveMenu(!activeMenu);
     }
-    let id = 0;
     const handleMenu = function (e) {
-        id = e.target.dataset.navId;
-        setActiveIndex(id);
-        console.log(id);
+        const newIndex = parseInt(e.target.dataset.navId);
+        setActiveIndex(newIndex);
     }
 
     return (
@@ -31,16 +29,13 @@ function Navbar() {
             <hr />
             <ul className="navbar-list">
                 {navList.map((el, i) => {
-                    return <li className={activeIndex === id ? 'navbar-item active' : 'navbar-item'} data-nav-id={i} key={i} onClick={(e) => handleMenu(e)}>
-
-                        <Link className="navbar-link" to={`/${el}`} data-nav-id={i}>
-
-                            <b> 0{i}</b>{el} {id}
-
-                        </Link>
-
-                    </li>
+                    return (
+                        <NavLink className={activeIndex === i ? 'navbar-item active' : 'navbar-item'} to={`/${el}`} data-nav-id={i} key={i} onClick={handleMenu}>
+                            <b>0{i}</b>{el} {activeIndex}
+                        </NavLink>
+                    );
                 })}
+
                 <img src={!activeMenu ? burgerMenu : closeMenu} alt="" className="burger" onClick={showMenu} />
             </ul>
 

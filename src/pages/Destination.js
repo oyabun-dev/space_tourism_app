@@ -16,17 +16,13 @@ export default function Destination() {
     const updateDestination = (e) => {
         const id = parseInt(e.target.dataset.id);
         setDestination(destinations[id]);
-        // destination = destinations[id];
+        const linksNode = document.querySelectorAll('.destination-link');
+        linksNode.forEach(link => {
+            linksNode.forEach(item => item.classList.remove('active'));
+            e.target.classList.add('active');
+        });
     }
 
-    const linksNode = document.querySelectorAll('.destination-link');
-    linksNode.forEach(link => {
-        link.addEventListener('click', () => {
-            console.log('clicked', link);
-            linksNode.forEach(item => item.classList.remove('active'));
-            link.classList.add('active');
-        });
-    });
 
     return (<div id='destination'>
         <Navbar />

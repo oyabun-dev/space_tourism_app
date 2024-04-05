@@ -10,10 +10,28 @@
         justify-content: space-between;
         align-items: center;
 
-        li {
+        .navbar-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 1.5vmin;
+            font: variables.$nav-text;
+            letter-spacing: 2.7px;
+            text-decoration: none;
+            color: variables.$accent;
+            text-transform: uppercase;
+            font-weight: 300;
+            height: 100%;
+            padding: 2rem .5rem;
             width: -moz-fit-content;
             width: fit-content;
             transition: all .1s ease-in-out; 
+
+            b {
+                height: fit-content;
+            }
+
             &.active {
                 border-bottom: 2px solid variables.$accent;
             }
@@ -22,24 +40,7 @@
                 border-bottom: 2px solid #979797;
             }
             
-            a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: nowrap;
-                gap: 1.5vmin;
-                font: variables.$nav-text;
-                letter-spacing: 2.7px;
-                text-decoration: none;
-                color: variables.$accent;
-                text-transform: uppercase;
-                font-weight: 300;
-                height: 100%;
-
-                b {
-                    height: fit-content;
-                }
-            }
+            
         }
     }
 
