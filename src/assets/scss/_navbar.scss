@@ -47,7 +47,7 @@ nav.navigation {
         }
 
         ul {
-            padding:0 7vw 0 7vw;
+            padding: 0 7vw 0 7vw;
             gap: 1.7vw;
             background-color: #ffffff0f;
 
@@ -86,9 +86,23 @@ nav.navigation {
         hr {
             display: none;
         }
+        
+        ul {
+            background-color: transparent;
+            -webkit-backdrop-filter: none;
+            -moz-backdrop-filter: none;
+            backdrop-filter: none;
+        }
 
-        ul .navbar-item {
+        ul .hideMenu {
             display: none;
+        }
+
+        ul .showMenu {
+            display: flex;
+            height: -webkit-fit-content;
+            height: fit-content;
+            padding: 2rem .5rem 1rem .5rem;
         }
 
         ul.navbar-list.active {

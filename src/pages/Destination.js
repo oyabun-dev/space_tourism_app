@@ -11,7 +11,6 @@ const pageTitle = {
 
 
 export default function Destination() {
-    // let destination = destinations[0];
     const [destination, setDestination] = useState(destinations[0]);
     const updateDestination = (e) => {
         const id = parseInt(e.target.dataset.id);

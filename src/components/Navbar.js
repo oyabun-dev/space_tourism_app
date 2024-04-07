@@ -8,7 +8,7 @@ import closeMenu from "../assets/img/shared/icon-close.svg";
 
 function Navbar() {
     const navList = ['home', 'destination', 'crew', 'technology'];
-    const [activeIndex, setActiveIndex] = useState(null); // activerIndex = 0
+    const [activeIndex, setActiveIndex] = useState(null);
     const [activeMenu, setActiveMenu] = useState(false);
 
     const showMenu = function () {
@@ -16,10 +16,12 @@ function Navbar() {
         navList.classList.toggle('active');
         setActiveMenu(!activeMenu);
     }
+
     const handleMenu = function (e) {
         const newIndex = parseInt(e.target.dataset.navId);
         setActiveIndex(newIndex);
     }
+    const navUlClass = activeMenu ? 'showMenu' : 'hideMenu';
 
     return (
         <nav className="navigation">
@@ -30,7 +32,7 @@ function Navbar() {
             <ul className="navbar-list">
                 {navList.map((el, i) => {
                     return (
-                        <NavLink className={activeIndex === i ? 'navbar-item active' : 'navbar-item'} to={`/${el}`} data-nav-id={i} key={i} onClick={handleMenu}>
+                        <NavLink className={activeIndex === i ? `navbar-item active ${navUlClass}` : `navbar-item ${navUlClass}`} to={`/${el}`} data-nav-id={i} key={i} onClick={handleMenu}>
                             <b>0{i}</b>{el} {activeIndex}
                         </NavLink>
                     );

@@ -200,8 +200,20 @@ nav.navigation ul li {
   nav.navigation hr {
     display: none;
   }
-  nav.navigation ul .navbar-item {
+  nav.navigation ul {
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+    -moz-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  nav.navigation ul .hideMenu {
     display: none;
+  }
+  nav.navigation ul .showMenu {
+    display: flex;
+    height: -webkit-fit-content;
+    height: fit-content;
+    padding: 2rem 0.5rem 1rem 0.5rem;
   }
   nav.navigation ul.navbar-list.active {
     display: flex;
