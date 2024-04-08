@@ -17,10 +17,18 @@
 
 .h3 {
   font: 56px "Bellefair", serif;
+  text-transform: uppercase;
 }
 
 .h4 {
   font: 32px "Bellefair", serif;
+  text-transform: uppercase;
+}
+
+.h45 {
+  font: 40px "Bellefair", serif;
+  letter-spacing: 4.75px;
+  text-transform: uppercase;
 }
 
 .h5 {
@@ -462,14 +470,14 @@ main#landingPage .main-content aside.button-side a.rounded-btn:hover::after {
   border-bottom: 2px solid #979797;
 }
 #destination .destination .destination-content aside .destination-info {
-  animation: slideInTop 1s ease-in-out;
+  animation: slideInRight 1s ease-in-out;
 }
-@keyframes slideInTop {
+@keyframes slideInRight {
   0% {
-    transform: translateY(20%);
+    transform: translateX(40%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 #destination .destination .destination-content aside .destination-info hr {
@@ -483,6 +491,16 @@ main#landingPage .main-content aside.button-side a.rounded-btn:hover::after {
   gap: 5rem;
 }
 
+@media (max-width: 991.98px) {
+  #destination {
+    background-image: url("../img/destination/background-destination-tablet.jpg");
+  }
+}
+@media (max-width: 991.98px) and (max-width: 575.98px) {
+  #destination {
+    background-image: url("../img/destination/background-destination-mobile.jpg");
+  }
+}
 @media (max-width: 991.98px) {
   #destination .destination {
     padding: 1rem 3rem 2rem 3rem;
@@ -556,6 +574,100 @@ h5.pageTitle b {
     padding: 1.5rem 0 0 0;
     font-size: 22px;
     text-align: center;
+  }
+}
+
+#crew {
+  background-image: url("../img/crew/background-crew-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+@media (max-width: 991.98px) {
+  #crew {
+    background-image: url("../img/crew/background-crew-tablet.jpg");
+  }
+}
+@media (max-width: 575.98px) {
+  #crew {
+    background-image: url("../img/crew/background-crew-mobile.jpg");
+  }
+}
+#crew .crew {
+  padding: 1rem 3rem 0rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 575.98px) {
+  #crew .crew {
+    padding: 1rem 2rem 2rem 2rem;
+  }
+}
+#crew .crew .crew-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 11vw;
+}
+#crew .crew .crew-content .crew-member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 5rem;
+}
+#crew .crew .crew-content .crew-member img {
+  width: min-content;
+}
+@media (max-width: 575.98px) {
+  #crew .crew .crew-content .crew-member img {
+    width: 100%;
+    min-width: 300px;
+  }
+}
+#crew .crew .crew-content .crew-member .crew-member-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 45vw;
+  gap: 1rem;
+}
+#crew .crew .crew-content .crew-member .crew-member-detail h4.h4 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.3137254902);
+}
+#crew .crew .crew-content .crew-member .crew-member-detail h3.h3 {
+  margin: 0;
+}
+#crew .crew .crew-content .crew-member .crew-member-detail p.body-text {
+  width: 80%;
+  margin-top: 1rem;
+}
+#crew .crew .crew-content .crew-member nav.crew-nav {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0.7rem 0 3rem 0;
+}
+#crew .crew .crew-content .crew-member nav.crew-nav li.crew-link {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3137254902);
+  cursor: pointer;
+}
+#crew .crew .crew-content .crew-member nav.crew-nav li.crew-link.active {
+  background-color: #FFFFFF;
+}
+#crew .crew .crew-content img {
+  height: 590px;
+}
+@media (max-width: 575.98px) {
+  #crew .crew .crew-content img {
+    width: 100%;
   }
 }
 

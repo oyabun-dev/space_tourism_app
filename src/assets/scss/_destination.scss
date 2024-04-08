@@ -74,13 +74,13 @@
                 }
 
                 .destination-info {
-                    animation: slideInTop 1s ease-in-out;
-                    @keyframes slideInTop {
+                    animation: slideInRight 1s ease-in-out;
+                    @keyframes slideInRight {
                         0% {
-                            transform: translateY(20%);
+                            transform: translateX(40%);
                         }
                         100% {
-                            transform: translateY(0);
+                            transform: translateX(0);
                         }
                     }
                     hr {
@@ -101,6 +101,10 @@
 
 @media (max-width: 991.98px){ 
     #destination {
+        background-image: url('../img/destination/background-destination-tablet.jpg');
+        @media (max-width: 575.98px) {
+            background-image: url('../img/destination/background-destination-mobile.jpg');
+        }
         .destination {
             padding: 1rem 3rem 2rem 3rem;    
             @media (max-width: 575.98px) {

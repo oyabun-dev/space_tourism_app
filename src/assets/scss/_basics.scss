@@ -21,10 +21,18 @@
 
 .h3 {
     font: variables.$h3;
+    text-transform: uppercase;
 }
 
 .h4 {
     font: variables.$h4;
+    text-transform: uppercase;
+}
+
+.h45 {
+    font: variables.$h45;
+    letter-spacing: 4.75px;
+    text-transform: uppercase;
 }
 
 .h5 {

@@ -1,0 +1,96 @@
+@use 'variables';
+
+#crew {
+    background-image: url('../img/crew/background-crew-desktop.jpg');
+    @media (max-width: 991.98px){ 
+        background-image: url('../img/crew/background-crew-tablet.jpg');
+    }
+    @media (max-width: 575.98px) {
+        background-image: url('../img/crew/background-crew-mobile.jpg');
+    }
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+
+    .crew {
+        padding: 1rem 3rem 0rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media (max-width: 575.98px) {
+            padding: 1rem 2rem 2rem 2rem;
+        } 
+
+        .crew-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            padding: 0 11vw;
+            
+            .crew-member {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 5rem;
+                img {
+                    width: min-content;
+                    @media (max-width: 575.98px) {
+                        width: 100%;
+                        min-width: 300px;
+                    }
+                }
+
+                .crew-member-detail {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    width: 45vw;
+                    gap: 1rem;
+
+                    h4.h4 {
+                        margin: 0;
+                        color: #FFFFFF50;
+                    }
+                    h3.h3 {
+                        margin: 0;
+                    }
+                    p.body-text {
+                        width: 80%;
+                        margin-top: 1rem;
+                    }   
+                    
+                }
+
+                nav.crew-nav {
+                    display: flex;
+                    gap: 1rem;
+                    list-style-type: none;
+                    padding: .7rem 0 3rem 0;
+
+                    li.crew-link {
+                        display: inline-block;
+                        height: 15px;
+                        width: 15px;
+                        border-radius: 50%;
+                        background-color: #FFFFFF50;
+                        cursor: pointer;
+
+                        &.active {
+                            background-color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+
+            img {
+                height: 590px;
+                @media (max-width: 575.98px) {
+                    width: 100%;
+                }
+            }
+        }
+        
+    }   
+}
