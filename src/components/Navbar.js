@@ -33,7 +33,7 @@ function Navbar() {
                 {navList.map((el, i) => {
                     return (
                         <NavLink className={activeIndex === i ? `navbar-item active ${navUlClass}` : `navbar-item ${navUlClass}`} to={`/${el}`} data-nav-id={i} key={i} onClick={handleMenu}>
-                            <b>0{i}</b>{el} {activeIndex}
+                            <b>0{i}</b>{el}
                         </NavLink>
                     );
                 })}

@@ -34,12 +34,30 @@ main#landingPage {
             justify-content: space-between;
             gap: 1.5rem;
             width: min-content;
+            animation: slideInLeft 1s ease-in-out;
+            @keyframes slideInLeft {
+                0% {
+                    transform: translateX(-40%);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
         }
 
         aside.button-side {
             a.rounded-btn {
                 @include rounded-button;
                 margin: 0;
+                animation: slideInRight 1s ease-in-out;
+                @keyframes slideInRight {
+                    0% {
+                        transform: translateX(40%);
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
             }
         }
     }

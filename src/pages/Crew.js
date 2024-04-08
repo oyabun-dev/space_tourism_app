@@ -39,6 +39,7 @@ export default function Crew() {
                             <li className='crew-link' data-id='3' onClick={updateCrew}></li>
                         </nav>
                     </div>
+                    <hr />
                     <img src={crew.image} />
                 </div>
             </div>

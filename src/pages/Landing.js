@@ -12,7 +12,7 @@ export default function Landing() {
                     <p className='body-text'>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
                 </aside>
                 <aside className='button-side'>
-                    <Link to="/" className='rounded-btn'>Explore</Link>
+                    <Link to="/destination" className='rounded-btn'>Explore</Link>
                 </aside>
             </div>
         </main>
