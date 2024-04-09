@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import siteLogo from "../assets/img/shared/logo.svg";
 import burgerMenu from "../assets/img/shared/icon-hamburger.svg";
