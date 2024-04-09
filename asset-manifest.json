@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/oyabun-dev/space_tourism_app/static/css/main.cc66a7e3.css",
-    "main.js": "/oyabun-dev/space_tourism_app/static/js/main.985120fa.js",
+    "main.js": "/oyabun-dev/space_tourism_app/static/js/main.e9b6d706.js",
     "static/media/image-victor-glover.png": "/oyabun-dev/space_tourism_app/static/media/image-victor-glover.8a9a5424588b73ec61c2.png",
     "static/media/image-anousheh-ansari.png": "/oyabun-dev/space_tourism_app/static/media/image-anousheh-ansari.2d647128496ddc638acd.png",
     "static/media/image-mark-shuttleworth.png": "/oyabun-dev/space_tourism_app/static/media/image-mark-shuttleworth.fc30f35b05fc0bc4ee47.png",
@@ -31,10 +31,10 @@
     "static/media/icon-close.svg": "/oyabun-dev/space_tourism_app/static/media/icon-close.d47fda63cbd8b3fedbbc1b2a53f64470.svg",
     "static/media/icon-hamburger.svg": "/oyabun-dev/space_tourism_app/static/media/icon-hamburger.5273efa7c50e96ef3e51e7a2b54048ce.svg",
     "main.cc66a7e3.css.map": "/oyabun-dev/space_tourism_app/static/css/main.cc66a7e3.css.map",
-    "main.985120fa.js.map": "/oyabun-dev/space_tourism_app/static/js/main.985120fa.js.map"
+    "main.e9b6d706.js.map": "/oyabun-dev/space_tourism_app/static/js/main.e9b6d706.js.map"
   },
   "entrypoints": [
     "static/css/main.cc66a7e3.css",
-    "static/js/main.985120fa.js"
+    "static/js/main.e9b6d706.js"
   ]
 }
