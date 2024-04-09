@@ -1,0 +1,159 @@
+@use 'variables';
+
+#technology {
+    background-image: url('../img/technology/background-technology-desktop.jpg');
+    @media (min-width: 768px) and (max-width: 991.98px){ 
+        background-image: url('../img/technology/background-technology-tablet.jpg');
+        overflow-y: auto;
+    background-size: cover;
+
+    }
+    @media (max-width: 767.98px) {
+        background-image: url('../img/technology/background-technology-mobile.jpg');
+        overflow-y: auto;
+    }
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+
+    .technology {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            align-items: start;
+        }
+
+        .pageTitle {
+            @media (max-width: 991.98px){ 
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+
+        .technology-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 9vw;
+            padding-left: 11vw;
+            @media (max-width: 991.98px){ 
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                gap: 3vw;
+            }
+        }
+
+        .technology-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4vw;
+            animation: slideInLeft 1s ease-in-out;
+            @media (max-width: 991.98px){ 
+                flex-direction: column;
+                padding-left: 3rem;
+                padding-right: 3rem;
+                gap: 1rem;
+            }
+
+            nav .technology-nav {
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                gap: 2rem;
+                @media (max-width: 991.98px){ 
+                    flex-direction: row;
+                    gap: 2rem;
+                    margin: 2rem 0;
+                }
+
+                li.technology-link {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    border: 1px solid #FFFFFF70;
+                    font-size: x-large;
+                    cursor: pointer;
+
+                    &.active {
+                        background-color: #FFFFFF;
+                        color: variables.$primary;
+                    }
+
+                    &:hover {
+                       border-color: #FFFFFF;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 991.98px){ 
+                        width: 60px;
+                        height: 60px;
+                    }
+                    @media (max-width: 767.98px) {
+                        width: 40px;
+                        height: 40px;
+                        font-size: medium;
+                    }
+                }
+            }
+
+            .technology-detail {
+                width: 470px;
+                @media (max-width: 991.98px){ 
+                    width: 100%;
+                }
+
+                h4.title-text {
+                    color: variables.$secondary;
+                }
+            }
+        }
+
+        img.portrait {
+            display: flex;
+            height: 527px;
+            animation: slideInRight 1s ease-in-out;
+            
+            @media (max-width: 991.98px){ 
+                display: none;
+            }
+        }
+        img.landscape {
+            display: none;
+            animation: slideInRight 1s ease-in-out;
+            height: 310px;
+            width: 100%;
+            object-fit: cover;
+            @media (max-width: 991.98px){ 
+                display: flex;
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-40%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(40%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

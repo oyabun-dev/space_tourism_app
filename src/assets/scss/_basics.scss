@@ -65,6 +65,14 @@
     font-weight: 300;
 }
 
+
+.title-text {
+    font: variables.$title-text;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    margin: 0;
+}
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -75,7 +83,7 @@
     }
 
     .h3 {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .h4 {
@@ -91,6 +99,8 @@
         font-size: 16px;
         line-height: 28px;
     }
+
+
 }
 
 @media (max-width: 575.98px) { 
@@ -115,5 +125,9 @@
     .body-text {
         font-size: 14px;
         line-height: 24px;
+    }
+
+    .title-text {
+        font-size: 16px;
     }
 }

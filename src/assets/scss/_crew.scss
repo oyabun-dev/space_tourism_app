@@ -126,6 +126,10 @@
                         &.active {
                             background-color: #FFFFFF;
                         }
+
+                        &:not(.active):hover {
+                            background-color: #FFFFFF70;
+                        }
                     }
                 }
             }

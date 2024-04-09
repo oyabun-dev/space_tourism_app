@@ -61,6 +61,13 @@
   font-weight: 300;
 }
 
+.title-text {
+  font: 18px "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  margin: 0;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -70,7 +77,7 @@
     font-size: 130px;
   }
   .h3 {
-    font-size: 45px;
+    font-size: 40px;
   }
   .h4 {
     font-size: 30px;
@@ -102,6 +109,9 @@
   .body-text {
     font-size: 14px;
     line-height: 24px;
+  }
+  .title-text {
+    font-size: 16px;
   }
 }
 nav.navigation {
@@ -140,7 +150,7 @@ nav.navigation ul .navbar-item b {
 nav.navigation ul .navbar-item.active {
   border-bottom: 2px solid #FFFFFF;
 }
-nav.navigation ul .navbar-item:hover {
+nav.navigation ul .navbar-item:not(.active):hover {
   border-bottom: 2px solid #979797;
 }
 nav.navigation .burger {
@@ -255,30 +265,6 @@ nav.navigation ul li {
     transition: all 0.5s ease-in-out;
     animation: slideInFromRight 0.5s ease-in-out;
     animation-fill-mode: forwards;
-  }
-  nav.navigation ul.navbar-list.active li {
-    display: flex;
-    box-sizing: initial;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding: 1rem 0 1rem 0;
-    font: 16px "Barlow Condensed", sans-serif;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    font-weight: 300;
-    transition: all 0.5s ease-in-out;
-    border-bottom: 2px solid transparent;
-  }
-  nav.navigation ul.navbar-list.active li.active {
-    border-bottom: 2px solid #FFFFFF;
-  }
-  nav.navigation ul.navbar-list.active li:hover {
-    border-bottom: 2px solid #979797;
-  }
-  nav.navigation ul.navbar-list.active li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: all 0.5s ease-in-out;
   }
   nav.navigation ul.navbar-list.active .burger {
     position: absolute;
@@ -497,7 +483,7 @@ main#landingPage .main-content aside.button-side a.rounded-btn:hover::after {
 #destination .destination .destination-content aside ul li.active {
   border-bottom: 2px solid #FFFFFF;
 }
-#destination .destination .destination-content aside ul li:hover {
+#destination .destination .destination-content aside ul li:not(.active):hover {
   border-bottom: 2px solid #979797;
 }
 #destination .destination .destination-content aside .destination-info {
@@ -749,6 +735,9 @@ h5.pageTitle b {
 #crew .crew .crew-content .crew-member nav.crew-nav li.crew-link.active {
   background-color: #FFFFFF;
 }
+#crew .crew .crew-content .crew-member nav.crew-nav li.crew-link:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.4392156863);
+}
 #crew .crew .crew-content img {
   height: 590px;
   animation: slideInRight 1s ease-in-out;
@@ -782,6 +771,171 @@ h5.pageTitle b {
 @media (max-width: 767.98px) {
   #crew .crew .crew-content hr {
     display: block;
+  }
+}
+
+#technology {
+  background-image: url("../img/technology/background-technology-desktop.jpg");
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #technology {
+    background-image: url("../img/technology/background-technology-tablet.jpg");
+    overflow-y: auto;
+    background-size: cover;
+  }
+}
+@media (max-width: 767.98px) {
+  #technology {
+    background-image: url("../img/technology/background-technology-mobile.jpg");
+    overflow-y: auto;
+  }
+}
+#technology .technology {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #technology .technology {
+    align-items: start;
+  }
+}
+@media (max-width: 991.98px) {
+  #technology .technology .pageTitle {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+#technology .technology .technology-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 9vw;
+  padding-left: 11vw;
+}
+@media (max-width: 991.98px) {
+  #technology .technology .technology-content {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 3vw;
+  }
+}
+#technology .technology .technology-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4vw;
+  animation: slideInLeft 1s ease-in-out;
+}
+@media (max-width: 991.98px) {
+  #technology .technology .technology-info {
+    flex-direction: column;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    gap: 1rem;
+  }
+}
+#technology .technology .technology-info nav .technology-nav {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 991.98px) {
+  #technology .technology .technology-info nav .technology-nav {
+    flex-direction: row;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+}
+#technology .technology .technology-info nav .technology-nav li.technology-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4392156863);
+  font-size: x-large;
+  cursor: pointer;
+}
+#technology .technology .technology-info nav .technology-nav li.technology-link.active {
+  background-color: #FFFFFF;
+  color: #0B0D17;
+}
+#technology .technology .technology-info nav .technology-nav li.technology-link:hover {
+  border-color: #FFFFFF;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #technology .technology .technology-info nav .technology-nav li.technology-link {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  #technology .technology .technology-info nav .technology-nav li.technology-link {
+    width: 40px;
+    height: 40px;
+    font-size: medium;
+  }
+}
+#technology .technology .technology-info .technology-detail {
+  width: 470px;
+}
+@media (max-width: 991.98px) {
+  #technology .technology .technology-info .technology-detail {
+    width: 100%;
+  }
+}
+#technology .technology .technology-info .technology-detail h4.title-text {
+  color: #D0D6F9;
+}
+#technology .technology img.portrait {
+  display: flex;
+  height: 527px;
+  animation: slideInRight 1s ease-in-out;
+}
+@media (max-width: 991.98px) {
+  #technology .technology img.portrait {
+    display: none;
+  }
+}
+#technology .technology img.landscape {
+  display: none;
+  animation: slideInRight 1s ease-in-out;
+  height: 310px;
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 991.98px) {
+  #technology .technology img.landscape {
+    display: flex;
+    margin-top: 2rem;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 

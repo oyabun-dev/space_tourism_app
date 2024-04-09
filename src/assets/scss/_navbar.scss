@@ -124,32 +124,7 @@ nav.navigation {
             transition: all .5s ease-in-out;
             animation: slideInFromRight .5s ease-in-out;
             animation-fill-mode: forwards;
-            li {
-                display: flex;
-                box-sizing: initial;
-                height: -moz-fit-content;
-                height: fit-content;
-                padding: 1rem 0 1rem 0;
-                font: variables.$nav-text;
-                color: variables.$accent;
-                text-transform: uppercase;
-                font-weight: 300;
-                transition: all .5s ease-in-out;
-                border-bottom: 2px solid transparent;
-
-                &.active {
-                    border-bottom: 2px solid variables.$accent;
-                }
-
-                &:hover {
-                    border-bottom: 2px solid #979797;
-                }
-                a {
-                    color: variables.$accent;
-                    text-decoration: none;
-                    transition: all .5s ease-in-out;
-                }
-            }
+            
 
             .burger {
                 position: absolute;
