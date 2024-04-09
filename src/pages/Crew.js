@@ -40,7 +40,7 @@ export default function Crew() {
                         </nav>
                     </div>
                     <hr />
-                    <img src={crew.image} />
+                    <img src={crew.image} alt={crew.name} />
                 </div>
             </div>
         </div>
