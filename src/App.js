@@ -1,6 +1,6 @@
 import "./assets/css/style.css";
 // import Navbar from "./Navbar";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Destination from "./pages/Destination";
 import PageNotFound from "./pages/PageNotFound";
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       {/* <Navbar /> */}
 
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={< Landing />} />
           <Route path="/home" element={< Landing />} />
@@ -20,7 +20,7 @@ function App() {
           <Route path="/crew" element={< Crew />} />
           <Route path="/technology" element={< Technology />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }

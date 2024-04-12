@@ -854,6 +854,7 @@ h5.pageTitle b {
     flex-direction: row;
     gap: 2rem;
     margin: 2rem 0;
+    padding: 0;
   }
 }
 #technology .technology .technology-info nav .technology-nav li.technology-link {
@@ -893,6 +894,16 @@ h5.pageTitle b {
 @media (max-width: 991.98px) {
   #technology .technology .technology-info .technology-detail {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #technology .technology .technology-info .technology-detail h3.h3 {
+    text-align: center;
+  }
+  #technology .technology .technology-info .technology-detail p.body-text {
+    text-align: center;
   }
 }
 #technology .technology .technology-info .technology-detail h4.title-text {

@@ -71,6 +71,7 @@
                     flex-direction: row;
                     gap: 2rem;
                     margin: 2rem 0;
+                    padding: 0;
                 }
 
                 li.technology-link {
@@ -109,11 +110,24 @@
                 width: 470px;
                 @media (max-width: 991.98px){ 
                     width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    h3.h3 {
+                        text-align: center;
+                    }
+
+                    p.body-text {
+                        text-align: center;
+                    }
                 }
 
                 h4.title-text {
                     color: variables.$secondary;
                 }
+
             }
         }
 
